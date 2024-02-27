@@ -7,6 +7,8 @@ Human::Human(std::string name) {
     else {
         this->name = "Human";
     }
+    std::cout << "Enter move: ";
+    std::cin >> move;
     
 }
 
@@ -15,7 +17,6 @@ std::string Human::getName() {
 }
 
 char Human::makeMove() {
-    std::cout << "Enter move: ";
-    std::cin >> move;
+    
     return move;
 }   
