@@ -10,8 +10,6 @@ int main() {
     Referee referee;
     Human human("Zen");
     Computer computer;
-    human.makeMove();
-    computer.makeMove();
     
     Player* winner;
     winner = referee.refGame(&computer, &human);
