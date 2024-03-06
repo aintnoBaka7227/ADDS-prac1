@@ -20,3 +20,5 @@ Move* Human::makeMove() {
         return new Scissors;
     }    
 }
+
+
