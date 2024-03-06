@@ -1,5 +1,5 @@
 #include "Rock.h"
 
-Rock::Rock() : Move("Rock", "Scissors") {
-    
+Rock::Rock() : Move("Rock", {"Scissors"}) {
+
 }
