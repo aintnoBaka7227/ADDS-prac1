@@ -5,6 +5,7 @@
 
 class Human : public Player {
     public:
+    Human();
     Human(std::string human_name);
     Move* makeMove();
 };
