@@ -12,7 +12,7 @@ int main() {
     Player* winner;
     winner = referee.refGame(&c, &human1);
     if (winner == nullptr) {
-        std::cout << " It's a Tie!." << std::endl;
+        std::cout << "It's a Tie!." << std::endl;
     }
     else {
         std::cout << winner->getName() << " Wins." << std::endl;
