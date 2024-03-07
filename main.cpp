@@ -15,14 +15,14 @@ int main() {
         std::cout << "It's a Tie!." << std::endl;
     }
     else {
-        std::cout << winner->getName() << " Wins." << std::endl;
+        std::cout << winner->getName() <<std::endl;
     }
     winner = referee.refGame(&human1, &human2);
     if (winner == nullptr) {
         std::cout << "It's a Tie!." << std::endl;
     }
     else {
-        std::cout << winner->getName() << " Wins." << std::endl;
+        std::cout << winner->getName() << std::endl;
     }
     return 0;
 }
