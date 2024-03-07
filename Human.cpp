@@ -1,8 +1,8 @@
 #include "Human.h"
 #include <iostream>
 
-Human::Human() {
-    
+Human::Human() : Human ("Human") {
+
 }
 
 Human::Human(std::string human_name) : Player(human_name) {
