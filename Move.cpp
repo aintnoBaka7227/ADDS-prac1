@@ -1,7 +1,7 @@
 #include "Move.h"
 
 std::string Move::getName() {
-    
+    return move_name;
 }
 
 Move::Move(std::string move_name, std::vector<std::string> moves) {

@@ -18,7 +18,9 @@ Move* Human::makeMove() {
     }
     else if (current_move == "Scissors") {
         return new Scissors;
-    }    
+    } 
+
+    return nullptr;   
 }
 
 
