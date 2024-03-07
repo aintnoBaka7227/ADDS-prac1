@@ -2,5 +2,9 @@
 #include "Rock.h"
 
 Move* Computer::makeMove() {
-    return new Rock;
+    return new Rock();
+}
+
+Computer::Computer() : Player("Computer") {
+
 }

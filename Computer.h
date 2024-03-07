@@ -4,6 +4,7 @@
 
 class Computer : public Player {
     public:
+    Computer();
     Move* makeMove();
 };
 

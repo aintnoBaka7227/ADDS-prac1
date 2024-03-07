@@ -10,6 +10,7 @@ class Move {
     public:
     Move(std::string move_name, std::vector<std::string> moves);
     std::string getName();
+    std::vector<std::string> getWinAgainstMoves();
 };
 
 #endif
