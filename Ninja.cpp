@@ -1,5 +1,5 @@
 #include "Ninja.h"
 
-Ninja::Ninja() : Move("Ninja", {"Pirate, Zombie"}) {
+Ninja::Ninja() : Move("Ninja", {"Pirate", "Zombie"}) {
     
 }
