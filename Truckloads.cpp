@@ -5,9 +5,10 @@ int Truckloads::numTrucks(int numCrates, int loadSize) {
     if (numCrates <= loadSize) {
         return 1;
     }
+    if (numCrates % 2)  {
+        return numTrucks(numCrates/2+1, loadSize) + numTrucks(numCrates/2, loadSize);
+    }
     else {
-        int split1 = ceil(numCrates/2);
-        int split2 = floor(numCrates/2);
-        return numTrucks(split1,loadSize)+numTrucks(split2,loadSize);
+        return numTrucks(numCrates/2, loadSize) + numTrucks(numCrates/2, loadSize);
     }
 }
