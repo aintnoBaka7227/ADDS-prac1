@@ -6,7 +6,7 @@ int main() {
 
     // first problem
     Truckloads truck1;
-    std::cout << truck1.numTrucks(4,2) << std::endl;
+    std::cout << truck1.numTrucks(15,1) << std::endl;
     // second problem
     Reverser r;
     std::cout << r.reverseString("Adam") << std::endl;
