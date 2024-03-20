@@ -11,9 +11,3 @@ int sum_of_powers(int n) {
         return sum + sum_of_powers(n-1);
     }
 }
-
-int main() {
-
-    std::cout << sum_of_powers(3);
-    return 0;
-}
