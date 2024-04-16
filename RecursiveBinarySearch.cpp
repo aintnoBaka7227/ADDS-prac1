@@ -13,16 +13,18 @@ bool RecursiveBinarySearch::recursiveBinarySearch(std::vector<int>& list, int ke
             return false;
         }
     }
-    int mid = (end + start)/2;
-    if (key == list.at(mid)) {
-        return true;
-    }
-    else {
-        if (key < list.at(mid)) {
-            recursiveBinarySearch(list, key, start, mid);
+    if (start < end) {
+        int mid = (end + start)/2;
+        if (key == list.at(mid)) {
+            return true;
         }
         else {
-            recursiveBinarySearch(list, key, mid, end);
+            if (key < list.at(mid)) {
+                return recursiveBinarySearch(list, key, start, mid+1);
+            }
+            else {
+                return recursiveBinarySearch(list, key, mid+1, end);
+            }
         }
     }
     return false;

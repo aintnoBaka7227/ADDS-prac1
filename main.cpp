@@ -5,7 +5,6 @@
 #include "RecursiveBinarySearch.h"
 
 int main() {
-    
     std::stringstream ss;
     std::string nums;
     std::getline(std::cin, nums);
@@ -17,11 +16,17 @@ int main() {
     }
 
     QuickSort quick_sort;
+    list = quick_sort.sort(list);
     RecursiveBinarySearch search;
-    std::vector<int> sorted_list = quick_sort.sort(list);
-    std::cout << search.search(list, 1) << " ";
-    for (int i = 0; i < sorted_list.size(); i++) {
-        std::cout << sorted_list[i] << " ";
+    bool check = search.search(list, 1);
+    if (check) {
+        std::cout << "true" << " ";
+    }
+    else {
+        std::cout << "false" << " ";
+    }
+    for (auto i = list.begin(); i != list.end(); i++) {
+        std::cout << *i << " ";
     }
     std::cout << std::endl;
     return 0;
