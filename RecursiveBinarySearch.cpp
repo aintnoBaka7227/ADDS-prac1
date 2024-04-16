@@ -20,10 +20,10 @@ bool RecursiveBinarySearch::recursiveBinarySearch(std::vector<int>& list, int ke
         }
         else {
             if (key < list.at(mid)) {
-                return recursiveBinarySearch(list, key, start, mid+1);
+                return recursiveBinarySearch(list, key, start, mid - 1);
             }
             else {
-                return recursiveBinarySearch(list, key, mid+1, end);
+                return recursiveBinarySearch(list, key, mid + 1, end);
             }
         }
     }
