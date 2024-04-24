@@ -80,7 +80,7 @@ int LinkedList::get(int pos) {
             return std::numeric_limits<int>::max();
         }
         else {
-            current_node = current_node -> link;
+            current_node = current_node->link;
         }
     }
     return current_node->data;

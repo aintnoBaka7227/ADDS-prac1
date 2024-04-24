@@ -6,6 +6,7 @@ class Node {
     int data;
     Node* link;
     public:
+    Node();
     friend class LinkedList;
     Node(int data, Node* link);
 };
