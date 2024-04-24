@@ -17,6 +17,9 @@ LinkedList::LinkedList(int* array, int len) {
 }
 
 LinkedList::~LinkedList() {
+    while (head != nullptr) {
+        deletePosition(1);
+    }
 
 }
 
