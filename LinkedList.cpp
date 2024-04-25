@@ -49,7 +49,10 @@ bool LinkedList::deletePosition(int pos) {
     if (head == nullptr) {
         return false;
     }
-    if (pos <= 1) {
+    if (pos == 0) {
+        return false;
+    }
+    if (pos == 1) {
         Node* temp = head;
         head = head->link;
         delete temp;
@@ -72,6 +75,9 @@ bool LinkedList::deletePosition(int pos) {
 
 int LinkedList::get(int pos) {
     if (head == nullptr) {
+        return std::numeric_limits<int>::max();
+    }
+    if (pos == 0) {
         return std::numeric_limits<int>::max();
     }
     Node* current_node = head;
