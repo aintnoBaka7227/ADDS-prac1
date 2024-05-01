@@ -35,7 +35,36 @@ void LinkedList::printList() {
 /////////// your code goes here... DO NOT change the function signatures ///////////
 
 bool LinkedList::swap(int pos1, int pos2) {
+	if (pos1 < 0 || pos2 < 0) {
+		return false;
+	}
+	if (pos1 == pos2) {
+		return true;
+	}
+	Node* prev1 = head;
+	Node* prev2 = head;
+	for (int i = 0; i < pos1 - 2; i++) {
+		if (prev1->link == nullptr) {
+			return false;
+		}
+		prev1 = prev1->link;
+	}
+	for (int i = 0; i < pos2 - 2; i++) {
+		if (prev2->link == nullptr) {
+			return false;
+		}
+		prev2 = prev2->link;
+	}
+	Node* after1 = prev1->link->link;
+	Node* after2 = prev2->link->link;
 
+	Node* temp_current1 = prev1->link;
+	prev1->link = prev2->link;
+	prev1->link->link = after1;
+
+	prev2->link = temp_current1;
+	prev2->link->link = after2;
+	return true;
 }
 
 bool LinkedList::find_and_delete(int target) {
