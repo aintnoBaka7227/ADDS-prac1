@@ -3,17 +3,17 @@
 #include <string>
 #include <unordered_map>
 
-class TrieNode {
+class Node {
     private:
     int routerNumber;
-    std::unordered_map<char, TrieNode*> addresses;
+    std::unordered_map<char, Node*> addresses;
     friend class PrefixMatcher;
     public:
-    TrieNode();
+    Node();
 };
 class PrefixMatcher {
     private:
-    TrieNode* root;
+    Node* root;
     public:
     PrefixMatcher();
     int selectRouter(std::string networkAddress);
