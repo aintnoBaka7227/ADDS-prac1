@@ -1,5 +1,4 @@
 #include "Autocomplete.h"
-#include <iostream>
 
 TrieNode::TrieNode() {
     isEndOfWord = false;
@@ -20,22 +19,6 @@ void Autocomplete::insert(std::string word) {
     }
     current->isEndOfWord = true;
 }
-
-void Autocomplete::print(TrieNode *node, std::string prefix) {
-    if (node == nullptr) return;
-    if (node->isEndOfWord) {
-        std::cout << prefix << std::endl;
-    }
-    for (auto pair : node->children) {
-        std::string new_prefix = prefix +  pair.first;
-        print(pair.second, new_prefix);
-    }
-}
-
-TrieNode* Autocomplete::getRoot() {
-    return root;
-}
-
 
 std::vector<std::string> Autocomplete::getSuggestions(std::string partialWord) {
     std::vector<std::string> results;

@@ -23,8 +23,6 @@ class Autocomplete {
     std::vector<std::string> getSuggestions(std::string partialWord);  
     // add a word to the known words
     void insert(std::string word);
-    TrieNode* getRoot();
-    void print(TrieNode *node, std::string prefix);
 };
 
 
