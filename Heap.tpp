@@ -3,6 +3,7 @@
 
 #include <vector>
 #include <cmath>  // for floor
+#include <iostream>
 
 template <typename T>
 class Heap {
@@ -57,6 +58,10 @@ Heap<T>::Heap(std::vector<T> start_values) {
 template <typename T>
 void Heap<T>::insert(T value) {
   // TODO: TO BE IMPLEMENTED
+  values.push_back(value);
+  int inserted_index = values.size() - 1;
+  int parent_index = floor((inserted_index - 1) / 2);
+  heapify(parent_index);
 }
 
 /*******************************/
@@ -66,6 +71,20 @@ void Heap<T>::insert(T value) {
 template <typename T>
 void Heap<T>::remove(T value) {
   // TODO: TO BE IMPLEMENTED
+  int deleted_index = -1;
+  for (int index = 0; index < values.size(); index++) {
+    if (values[index] == value) {
+      deleted_index = index;
+      break;
+    }
+  }
+  if (deleted_index == -1) {
+    return;
+  }
+  values[deleted_index] = values[values.size() - 1];
+  values.pop_back();
+  int parent_index = floor((deleted_index - 1) / 2);
+  heapify(parent_index);
 }
 
 /*******************************/
@@ -75,6 +94,7 @@ void Heap<T>::remove(T value) {
 template <typename T>
 T Heap<T>::getMin() {
   // TODO: TO BE IMPLEMENTED
+  return values[0];
 }
 
 /*******************************/
