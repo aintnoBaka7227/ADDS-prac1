@@ -11,6 +11,7 @@ class Document {
     int num_used_license;
     friend class DocumentManager;
     public:
+    Document();
     Document(std::string name, int license_limit);
 };
 

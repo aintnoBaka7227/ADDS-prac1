@@ -1,6 +1,10 @@
 #include "DocumentManager.h"
 #include <iostream>
 
+Document::Document() {
+    
+}
+
 Document::Document(std::string name, int license_limit) : name(name), license_limit(license_limit), num_used_license(0) {};
 
 DocumentManager::DocumentManager() {
